@@ -1,4 +1,6 @@
 from vihicle_types import USVihicleFactory, EUVihicleFactory
+from logger import logging_info
+
 
 if __name__ == "__main__":
     us_factory = USVihicleFactory()
@@ -10,7 +12,7 @@ if __name__ == "__main__":
     bmw = eu_factory.create_car("BMW M3")
     ducati = eu_factory.create_motorcycle("Ducati")
 
-    print(mustang.model)
-    print(harley.model)
-    print(bmw.model)
-    print(ducati.model)
+    logging_info(mustang.model)
+    logging_info(harley.model)
+    logging_info(bmw.model)
+    logging_info(ducati.model)
