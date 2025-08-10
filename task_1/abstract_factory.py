@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Vihicle(ABC):
-    def __init__(self, model: str):
+    def __init__(self, make: str, model: str):
+        self.make = make
         self.model = model
 
     @abstractmethod
@@ -16,9 +17,9 @@ class Vihicle(ABC):
 
 class VihicleFactory(ABC):
     @abstractmethod
-    def create_car(self, model: str):
+    def create_car(self, make: str, model: str):
         pass
 
     @abstractmethod
-    def create_motorcycle(self, model: str):
+    def create_motorcycle(self, make: str, model: str):
         pass

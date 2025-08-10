@@ -7,4 +7,3 @@ logging.basicConfig(
 
 def logging_info(message):
     logging.info(message)
-    print(message)

@@ -4,22 +4,25 @@ from vihicles import Car, Motorcycle
 
 class USVihicleFactory(VihicleFactory):
     def __init__(self):
-        self.make = "(US Spec)"
+        self.spec = "(US Spec)"
 
-    def create_car(self, model: str):
-        return Car(model + " " + self.make)
+    def create_car(self, make: str, model: str):
 
-    def create_motorcycle(self, model: str):
-        return Motorcycle(model + " " + self.make)
+        return {"vihicle": Car(make=make, model=model), "spec": self.spec}
+
+    def create_motorcycle(self, make: str, model: str):
+        return {"vihicle": Motorcycle(make=make, model=model), "spec": self.spec}
 
 
 class EUVihicleFactory(VihicleFactory):
 
     def __init__(self):
-        self.make = "(EU Spec)"
+        self.spec = "(EU Spec)"
 
-    def create_car(self, model: str):
-        return Car(model + " " + self.make)
+    def create_car(self, make: str, model: str):
 
-    def create_motorcycle(self, model: str):
-        return Motorcycle(model + " " + self.make)
+        return {"vihicle": Car(make=make, model=model), "spec": self.spec}
+
+    def create_motorcycle(self, make: str, model: str):
+
+        return {"vihicle": Motorcycle(make=make, model=model), "spec": self.spec}
